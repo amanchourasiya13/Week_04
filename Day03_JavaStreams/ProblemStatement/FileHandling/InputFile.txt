@@ -1,0 +1,101 @@
+Hi,
+this is input file.
+1. File Streams
+Handle reading/writing data directly to/from files.
+Byte Streams:
+FileInputStream: Reads bytes from a file.
+FileOutputStream: Writes bytes to a file.
+Use Case: Binary files (e.g., images, PDFs).
+
+
+Example:
+import java.io.*;
+
+public class FileStreamExample {
+    public static void main(String[] args) {
+        try (FileInputStream fis = new FileInputStream("input.txt");
+             FileOutputStream fos = new FileOutputStream("output.txt")) {
+
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                fos.write(byteData);
+            }
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+Character Streams:
+FileReader: Reads characters from a text file.
+FileWriter: Writes characters to a text file.
+Use Case: Text files with proper character encoding.
+Example:
+import java.io.*;
+
+public class FileReaderWriterExample {
+    public static void main(String[] args) {
+        try (FileReader fr = new FileReader("input.txt");
+             FileWriter fw = new FileWriter("output.txt")) {
+
+            int charData;
+            while ((charData = fr.read()) != -1) {
+                fw.write(charData);
+            }
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+1
+2
+3
+4
+5
+6
+7
+8
+90
+-
+=
+,
+.
+/
+;
+'
+[
+]
+\
+'
