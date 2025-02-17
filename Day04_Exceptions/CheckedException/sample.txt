@@ -1,0 +1,2 @@
+Hi,
+this is sample class file for checked exception..
